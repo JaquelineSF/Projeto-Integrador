@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Pet</title>
+    <script src="./components/site-header.js" type="module"></script>
+    <script src="./components/site-footer.js" type="module"></script>
+</head>
+<body>
+    <site-header>
+        <nav slot="info">
+            <a href="./index.html">Voltar</a>
+        </nav>
+    </site-header>
+    <h2>Cadastro dos Pet</h2>
+
+    <form action="/action_page.php">
+        <label for="name">Nome do Pet:</label>
+        <input type="text" id="name" name="name">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade"><br><br>
+        <label for="espec">Espécie:</label>
+        <input type="text" id="espec" name="espec">
+        <label for="caracter">Caracteristicas:</label>
+        <input type="text" id="caracter" name="caracter"><br><br>
+        <label for="raca">Raça:</label>
+        <input type="text" id="raca" name="raca">
+        <label for="sexo">Sexo:</label>
+        <input type="radio" id="sexo" name="sexo" value="Masculino">
+        <label for="sexo">Masculino</label>
+        <input type="radio" id="sexo" name="sexo" value="Feminino">
+        <label for="sexo">Feminino</label><br><br>
+        <label for="files">Fotos:</label>
+        <input type="file" id="files" name="files" multiple><br><br><br>
+        <input type="submit" value="Cadastrar"><br><br><br>
+    </form>
+    <site-footer></site-footer>
+</body>
+</html>

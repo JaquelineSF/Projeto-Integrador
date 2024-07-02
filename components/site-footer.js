@@ -6,6 +6,7 @@ template.innerHTML = `
             <a href="./adocao.html">Adoção de pets</a>
             <a href="./eventos.html">Eventos Próximos</a>
             <a href="./denuncia.html">Canal de denúncias</a>
+            <a href="./cadastro_pet.html">Cadastro do Pet</a>
         </nav>
         <p>LOGO</p>
         <section>
