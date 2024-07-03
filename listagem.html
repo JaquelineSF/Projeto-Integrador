@@ -6,46 +6,7 @@
         <title>Listagem de Pets</title>
         <script src="./components/site-header.js" type="module"></script>
         <script src="./components/site-footer.js" type="module"></script>
-       <!--
-        <style>
-            /* Estilos opcionais para melhorar a apresentação */
-            label {
-                margin-right: 10px;
-            }
-        </style>
-       -->
     </head>
-        <!-- <script>
-            const formFiltro = document.getElementById('filtroAnimais');
-            const listaResultados = document.getElementById('resultado');
-    
-            formFiltro.addEventListener('change', function() {
-                const especiesSelecionadas = [...formFiltro.querySelectorAll('input[name=especie]:checked')].map(el => el.value);
-                
-                // Simulação de resultados (pode ser substituído por uma chamada a um servidor ou outra fonte de dados)
-                const resultados = [
-                    { nome: 'Meias Brancas', especie: 'gato'},
-                    { nome: 'Pequena', especie: 'cachorro' },
-                    { nome: 'Piu-Piu', especie: 'ave' },
-                    { nome: 'Nemo', especie: 'outros' },
-                    { nome: 'Whiskers', especie: 'gato' },
-                    { nome: 'Tweety', especie: 'ave' },
-                    { nome: 'Bob', especie: 'cachorro' },
-                    { nome: 'Tina', especie: 'outros' },
-                ];
-    
-                // Filtrando os resultados
-                const resultadosFiltrados = resultados.filter(animal => especiesSelecionadas.includes(animal.especie));
-    
-                // Exibindo os resultados
-                listaResultados.innerHTML = '';
-                resultadosFiltrados.forEach(animal => {
-                    const animalDiv = document.createElement('div');
-                    animalDiv.textContent = `${animal.nome} - ${animal.especie}`;
-                    listaResultados.appendChild(animalDiv);
-                });
-            });
-        </script> -->
     <body>
         <header>
             <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68">
