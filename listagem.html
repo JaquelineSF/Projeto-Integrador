@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listagem de Pets</title>
+        <style>
+            /* Estilos opcionais para melhorar a apresentação */
+            label {
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Encontre um pet em nossa lista</h2>
+    
+        <!-- Checkbox para seleção de espécies -->
+        <form id="filtroAnimais">
+            <label>
+                <input type="checkbox" name="especie" value="gato"> Gato
+            </label>
+            <label>
+                <input type="checkbox" name="especie" value="cachorro"> Cachorro
+            </label>
+            <label>
+                <input type="checkbox" name="especie" value="ave"> Ave
+            </label>
+            <label>
+                <input type="checkbox" name="especie" value="outros"> Outros
+            </label>
+        </form>
+    
+        <!-- Lista de animais (simulando resultados) -->
+        <div id="listaAnimais">
+            <h3>Resultados:</h3>
+            <div id="resultado">
+                <!-- Aqui serão exibidos os resultados conforme o filtro -->
+            </div>
+        </div>
+    
+        <!-- Script para filtrar os resultados -->
+        <script>
+            const formFiltro = document.getElementById('filtroAnimais');
+            const listaResultados = document.getElementById('resultado');
+    
+            formFiltro.addEventListener('change', function() {
+                const especiesSelecionadas = [...formFiltro.querySelectorAll('input[name=especie]:checked')].map(el => el.value);
+                
+                // Simulação de resultados (pode ser substituído por uma chamada a um servidor ou outra fonte de dados)
+                const resultados = [
+                    { nome: 'Meias Brancas', especie: 'gato'},
+                    { nome: 'Pequena', especie: 'cachorro' },
+                    { nome: 'Piu-Piu', especie: 'ave' },
+                    { nome: 'Nemo', especie: 'outros' },
+                    { nome: 'Whiskers', especie: 'gato' },
+                    { nome: 'Tweety', especie: 'ave' },
+                    { nome: 'Bob', especie: 'cachorro' },
+                    { nome: 'Tina', especie: 'outros' },
+                ];
+    
+                // Filtrando os resultados
+                const resultadosFiltrados = resultados.filter(animal => especiesSelecionadas.includes(animal.especie));
+    
+                // Exibindo os resultados
+                listaResultados.innerHTML = '';
+                resultadosFiltrados.forEach(animal => {
+                    const animalDiv = document.createElement('div');
+                    animalDiv.textContent = `${animal.nome} - ${animal.especie}`;
+                    listaResultados.appendChild(animalDiv);
+                });
+            });
+        </script>
+    </body>
+    </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet id Brasil</title>
+    <script src="./components/site-header.js" type="module"></script>
+    <script src="./components/site-footer.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68">
+        <h1>Pet id Brasil</h1>
+        <nav slot="info">
+            <a href="./cadastro_pet.html">Login</a>
+            <a href="./registro.html">Registro</a>        
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Lista dos pets</h2>
+                <ul>
+                <li>
+                    <img src="./assets/maracuja.webp" alt="gato laranja">
+                    <p>Espécie: Gato</p>
+                    <p>Nome: Maracujá</p>
+                    <p>Cor: Laranja</p>
+                    <p>Sexo: Macho</p>                    
+                </li>
+                <li>
+                    <img src="./assets/pequena.jpg" alt="cachorro salsicha marrom">
+                    <p>Espécie: Cachorro</p>
+                    <p>Nome: Pequena</p>
+                    <p>Cor: Marrom</p>
+                    <p>Sexo: Femea</p>                    
+                </li>
+                <li>
+                    <img src="./assets/meiasbrancas.jpg" alt="gato preto com pata laranja">
+                    <p>Espécie: Gato</p>
+                    <p>Nome: Meias Brancas</p>
+                    <p>Cor: Preto</p>
+                    <p>Sexo: Macho</p>                    
+                </li>
+                <li>
+                    <img src="./assets/auau.webp" alt="cachorro preto e marron">
+                    <p>Espécie: Cachorro</p>
+                    <p>Nome: Rock</p>
+                    <p>Cor: Preto e Marron</p>
+                    <p>Sexo: Macho</p>                    
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="./listagem.html">Listagem de pets</a>
+            <a href="./adocao.html">Adoção de pets</a>
+            <a href="./eventos.html">Eventos Próximos</a>
+            <a href="./denuncia.html">Canal de denúncias</a>
+            <a href="./cadastro_pet.html">Cadastro do Pet</a>
+        </nav>
+        <p><img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68"></p>
+        <section>
+            <p>Contatos: </p>
+            <ul>
+                <li>Telefone: (99) 99999-9999</li>
+                <li>E-mail: petid@brasil.com</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
