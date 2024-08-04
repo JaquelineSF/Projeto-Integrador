@@ -9,32 +9,44 @@ section {
 
 }
 
-section>div {
-    background: url(/assets/fundo_blocos.png);
-    background-size: cover;
-    margin: 20px 20px 20px 0px;
-    padding: 15px;
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    display: grid;
-    place-items: center;
 
-
-}
-
-h2 {
+h1 {
     background: url(/assets/fundo_blocos_rx.png);
     color: #f9fafa;
     width: 900px;
     height: 40px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 20px;
-    margin: 0px;
-
-
+    margin-top: 15px;
 }
+
+.conteudo-principal {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.imagem-principal {
+    margin-right: 20px;
+}
+
+.caixa-texto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 450px; /* Ajuste a largura conforme necessário */
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 15px;
+}
+
 
 /* Estilos para o calendário */
 
