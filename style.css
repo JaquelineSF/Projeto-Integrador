@@ -20,7 +20,7 @@ body {
 /* Header */
 header {
     width: 100%;
-    background-color: #2a2d72;
+    background-color: #7073a9;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -45,7 +45,7 @@ header nav a {
 }
 
 header nav a:hover {
-    background-color: #1f225a;
+    background-color: #7073a9;
 }
 
 /* Main */
@@ -71,7 +71,7 @@ article {
 }
 
 article h2 {
-    color: #2a2d72;
+    color: #7073a9;
     margin-bottom: 10px;
 }
 
@@ -133,7 +133,7 @@ section h2 + nav a img:hover {
 /* Footer */
 footer {
     width: 100%;
-    background-color: #2a2d72;
+    background-color: #7073a9;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -150,7 +150,7 @@ footer nav a {
 }
 
 footer nav a:hover {
-    background-color: #1f225a;
+    background-color: #7073a9;
 }
 
 footer section {

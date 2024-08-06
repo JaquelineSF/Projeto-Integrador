@@ -45,7 +45,7 @@ main section article img {
 
 /* Headings */
 main section h2 {
-    color: #2a2d72;
+    color: #7073a9;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -70,12 +70,12 @@ main section ul li img {
 
 main section ul li p {
     margin-top: 5px;
-    color: #2a2d72;
+    color: #7073a9;
 }
 
 /* Footer */
 footer {
-    background-color: #2a2d72;
+    background-color: #7073a9;
     color: white;
     text-align: center;
     padding: 1rem;

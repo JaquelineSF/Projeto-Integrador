@@ -19,7 +19,7 @@ body {
 /* Header */
 site-header {
     width: 100%;
-    background-color: #2a2d72;
+    background-color: #7073a9;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -37,7 +37,7 @@ header nav a:hover {
 
 /* Main */
 h2 {
-    color: #2a2d72;
+    color: #7073a9;
     margin: 20px 0;
 }
 
@@ -66,7 +66,7 @@ form input[type="password"] {
 }
 
 form input[type="submit"] {
-    background-color: #2a2d72;
+    background-color:#7073a9;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -76,7 +76,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #1f225a;
+    background-color: #7073a9;
 }
 
 form p {
@@ -85,7 +85,7 @@ form p {
 }
 
 p a {
-    color: #2a2d72;
+    color: #7073a9;
     text-decoration: none;
 }
 
@@ -96,7 +96,7 @@ p a:hover {
 /* Footer */
 site-footer {
     width: 100%;
-    background-color: #2a2d72;
+    background-color: #7073a9;
     color: white;
     text-align: center;
     padding: 1rem 0;

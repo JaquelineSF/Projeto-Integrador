@@ -50,3 +50,4 @@ function mostrarDetalhesEvento(listaEventos) {
 
 // Chama a função para criar o calendário ao carregar a página
 criarCalendario();
+

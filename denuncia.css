@@ -23,11 +23,11 @@ main {
     margin: 0 auto;
 }
 
-/* Heading */
-h1 {
-    color: #2a2d72;
+/* Headings */
+main section h2 {
+    color: #7073a9;
+    margin-bottom: 10px;
     text-align: center;
-    margin-top: 20px;
 }
 
 /* Image */
@@ -52,7 +52,7 @@ h1 {
 }
 
 .caixa-texto h2 {
-    color: #2a2d72;
+    color: #7073a9;
     margin-bottom: 10px;
 }
 
@@ -72,18 +72,18 @@ select {
 
 /* Links */
 a {
-    color: #2a2d72;
+    color: #7073a9;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #1e2056;
+    color: #7073a9;
 }
 
 /* Footer */
 footer {
-    background-color: #2a2d72;
+    background-color: #7073a9;
     color: white;
     text-align: center;
     padding: 1rem;
