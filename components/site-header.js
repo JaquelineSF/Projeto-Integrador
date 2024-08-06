@@ -3,7 +3,7 @@ template.innerHTML = `
     <style>
         header {
             width: 100%;
-            background-color: #2a2d72;
+            background-color: #7073a9;
             color: white;
             padding: 1rem 0;
             text-align: center;
@@ -28,7 +28,7 @@ template.innerHTML = `
         }
         
         header nav a:hover {
-            background-color: #1f225a;
+            background-color: #7073a9;
         }
     </style>
     <header>

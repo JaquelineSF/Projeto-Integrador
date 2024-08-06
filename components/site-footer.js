@@ -3,7 +3,7 @@ template.innerHTML = `
     <style>
         footer {
             width: 100%;
-            background-color: #2a2d72;
+            background-color: #7073a9;
             color: white;
             text-align: center;
             padding: 1rem 0;
@@ -20,7 +20,7 @@ template.innerHTML = `
         }
         
         footer nav a:hover {
-            background-color: #1f225a;
+            background-color: #7073a9;
         }
         
         footer section {
