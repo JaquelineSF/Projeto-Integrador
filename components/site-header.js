@@ -1,5 +1,36 @@
 const template = document.createElement('template');
 template.innerHTML = `
+    <style>
+        header {
+            width: 100%;
+            background-color: #2a2d72;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        header img {
+            margin-bottom: 10px;
+        }
+        
+        header h1 {
+            margin-bottom: 20px;
+        }
+        
+        header nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        header nav a:hover {
+            background-color: #1f225a;
+        }
+    </style>
     <header>
         <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68">
         <h1>Pet id Brasil</h1>
@@ -16,14 +47,14 @@ template.innerHTML = `
             <a href="./cadastro_pet.html">Cadastro do Pet</a>
         </nav>
     </header>
-`
+`;
 
 class SiteHeader extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({mode: 'closed'});
         let clone = template.content.cloneNode(true);
-        shadowRoot.append(clone)
+        shadowRoot.append(clone);
     }
 }
 
