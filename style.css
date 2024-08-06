@@ -1,77 +1,167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #2a2d72;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #1f225a;
+}
+
+/* Main */
 main {
-    width: 900px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h2 {
+    color: #2a2d72;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+section ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-
-h1 {
-    background: url(/assets/fundo_blocos_rx.png);
-    color: #f9fafa;
-    width: 900px;
-    height: 40px;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 20px;
-    margin-top: 15px;
-}
-
-.conteudo-principal {
-    display: flex;
-    align-items: flex-start;
-    margin: 20px 0;
-}
-
-.imagem-principal {
-    margin-right: 20px;
-}
-
-.caixa-texto {
-    border: 1px solid #ccc;
+section ul li {
+    width: 30%;
+    background-color: #fff;
     padding: 10px;
-    padding-bottom: 25px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+section ul li img {
+    width: 100%;
     border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 450px;
+    margin-bottom: 10px;
 }
 
+/* Care section */
+section h2 + nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
-h2 {
+section h2 + nav a {
+    width: 18%;
     text-align: center;
-    margin-top: 15px;
+    color: #333;
+    text-decoration: none;
 }
 
-
-/* Estilos para o calendário */
-
-.calendario {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    margin: 20px 0;
+section h2 + nav a img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
 }
 
-.dia {
-    border: 1.5px solid #48347c;
-    padding: 10px;
+section h2 + nav a img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #2a2d72;
+    color: white;
     text-align: center;
-    cursor: pointer;
-    position: relative;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
 
-.dia.destaque {
-    background-color: #08ccc4; 
+footer nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.detalhes-evento {
+footer nav a:hover {
+    background-color: #1f225a;
+}
+
+footer section {
     margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
 }
