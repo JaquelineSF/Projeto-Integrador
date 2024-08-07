@@ -1,153 +1,50 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-/* Header and Footer */
-site-header, site-footer {
-    display: block;
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Headings */
-main section h2 {
-    color: #7073a9;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Content Section */
-.conteudo-principal {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+/* Calendário */
+.calendario-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
-/* Main Image */
-.imagem-principal {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-/* Text Box */
-.caixa-texto {
-    margin: 20px 0;
+.calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    max-width: 300px;
 }
 
-.caixa-texto h3 {
-    color: #7073a9;
-    margin-bottom: 10px;
+.calendario-header button {
+    background-color: #2a2d72;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
-.caixa-texto ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.caixa-texto li {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-/* Calendar */
-h2 {
-    color: #7073a9;
-    text-align: center;
-    margin-top: 40px;
+.calendario-header h2 {
+    margin: 0;
+    color: #2a2d72;
 }
 
 .calendario {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
 }
 
-.detalhes-evento {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
-
-/* Footer */
-footer {
-    background-color: #7073a9;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-/* Estilo para os dias do calendário */
 .dia {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin: 5px;
+    padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #ccc;
     cursor: pointer;
-    background-color: #f5f5f5;
+}
+
+.dia.destaque {
+    background-color: #ffea00;
 }
 
 .dia:hover {
-    background-color: #e0e0e0;
-}
-
-.destaque {
-    background-color: #7073a9;
-    color: white;
-}
-
-/* Estilo para a seção de detalhes dos eventos */
-#detalhes-evento {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    background-color: #ddd;
 }
