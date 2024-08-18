@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,13 +9,14 @@
     <script src="./components/site-footer.js" type="module"></script>
     <script src="./assets/script.js" defer></script>
     <link rel="stylesheet" href="eventos.css">
+   
 </head>
 <body>
     <site-header></site-header>
     <header></header>
     <main>
-        <h1>TUDO SOBRE OS EVENTOS PET</h1>
-        <div class="conteudo-principal">
+        <h1>TUDO SOBRE OS EVENTOS PETS</h1>
+         <div class="conteudo-principal">
             <img class="imagem-principal" src="/assets/site foto principal.jpg" alt="Tudo Sobre os Eventos Pets" height="200" />
             <div class="caixa-texto">
                 <h3>Informações da Página:</h3>
@@ -28,17 +30,12 @@
         </div>
         <h2>Calendário de Eventos</h2>
         
-        <div class="calendario-container">
-            <div class="calendario-header">
-                <button id="prev-month">&lt;</button>
-                <h2 id="month-year"></h2>
-                <button id="next-month">&gt;</button>
-            </div>
-            <div class="calendario" id="calendario"></div>
-        </div>
+        <div class="calendario" id="calendario"></div> <!-- Calendário dos eventos -->
 
-        <div class="detalhes-evento" id="detalhes-evento" style="display: none;"></div>
+        <div class="detalhes-evento" id="detalhes-evento" style="display: none;"></div> <!-- Detalhes do evento -->
     </main>
     <site-footer></site-footer>
+
+    
 </body>
 </html>

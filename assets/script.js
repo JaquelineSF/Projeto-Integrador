@@ -1,3 +1,4 @@
+// Estrutura de dados para os eventos, permitindo múltiplos eventos por dia
 const eventos = {
     '13': [
         { titulo: 'Feira de Adoção', data: '13/07' },
@@ -12,62 +13,41 @@ const eventos = {
     ],
 };
 
+// Referências aos elementos do DOM
 const calendarioElemento = document.getElementById('calendario');
 const detalhesEventoElemento = document.getElementById('detalhes-evento');
-const monthYearElement = document.getElementById('month-year');
-const prevMonthButton = document.getElementById('prev-month');
-const nextMonthButton = document.getElementById('next-month');
 
-let currentMonth = new Date().getMonth();
-let currentYear = new Date().getFullYear();
+// Função para criar o calendário
+function criarCalendario() {
+    for (let dia = 1; dia <= 31; dia++) {
+        const diaElemento = document.createElement('div'); // Cria um elemento para o dia
+        diaElemento.className = 'dia'; // Adiciona a classe 'dia'
+        diaElemento.textContent = dia; // Define o texto do dia
 
-function criarCalendario(month, year) {
-    calendarioElemento.innerHTML = '';
-    const firstDay = new Date(year, month).getDay();
-    const daysInMonth = 32 - new Date(year, month, 32).getDate();
-    const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-
-    monthYearElement.textContent = `${monthNames[month]} ${year}`;
-
-    for (let i = 0; i < firstDay; i++) {
-        const emptyCell = document.createElement('div');
-        calendarioElemento.appendChild(emptyCell);
-    }
-
-    for (let dia = 1; dia <= daysInMonth; dia++) {
-        const diaElemento = document.createElement('div');
-        diaElemento.className = 'dia';
-        diaElemento.textContent = dia;
-
+        // Verifica se há eventos para o dia
         if (eventos[dia]) {
-            diaElemento.classList.add('destaque');
+            diaElemento.classList.add('destaque'); // Destaca o dia
+            // Adiciona um evento de clique para mostrar os detalhes do evento
             diaElemento.onclick = () => mostrarDetalhesEvento(eventos[dia]);
         }
 
-        calendarioElemento.appendChild(diaElemento);
+        calendarioElemento.appendChild(diaElemento); // Adiciona o dia ao calendário
     }
 }
 
+// Função para mostrar os detalhes dos eventos ao clicar no dia
 function mostrarDetalhesEvento(listaEventos) {
-    detalhesEventoElemento.style.display = 'block';
-    detalhesEventoElemento.innerHTML = '<h3>Eventos:</h3>';
+    detalhesEventoElemento.style.display = 'block'; // Exibe a div de detalhes
+    detalhesEventoElemento.innerHTML = '<h3>Eventos:</h3>'; // Define o título da seção de eventos
+
+    // Itera sobre a lista de eventos e adiciona à div de detalhes
     listaEventos.forEach(evento => {
-        detalhesEventoElemento.innerHTML += `<p><strong>${evento.titulo}</strong><br>Data: ${evento.data}</p>`;
+        detalhesEventoElemento.innerHTML += `
+            <p><strong>${evento.titulo}</strong><br>Data: ${evento.data}</p>
+        `;
     });
 }
 
-prevMonthButton.onclick = () => {
-    currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
-    currentYear = currentMonth === 11 ? currentYear - 1 : currentYear;
-    criarCalendario(currentMonth, currentYear);
-};
+// Chama a função para criar o calendário ao carregar a página
+criarCalendario();
 
-nextMonthButton.onclick = () => {
-    currentMonth = currentMonth === 11 ? 0 : currentMonth + 1;
-    currentYear = currentMonth === 0 ? currentYear + 1 : currentYear;
-    criarCalendario(currentMonth, currentYear);
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    criarCalendario(currentMonth, currentYear);
-});
