@@ -71,3 +71,15 @@ nextMonthButton.onclick = () => {
 document.addEventListener('DOMContentLoaded', () => {
     criarCalendario(currentMonth, currentYear);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('header nav a, footer nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});

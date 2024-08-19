@@ -165,3 +165,8 @@ footer ul {
 footer ul li {
     margin-bottom: 5px;
 }
+
+header nav a.active, footer nav a.active {
+    background-color: #4a4e8c; 
+    font-weight: bold; 
+}
