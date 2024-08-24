@@ -12,6 +12,7 @@ template.innerHTML = `
         
         header img {
             margin-bottom: 10px;
+            animation: pulsar 2s infinite;
         }
         
         header h1 {
@@ -30,14 +31,27 @@ template.innerHTML = `
         header nav a:hover {
             background-color: #7073a9;
         }
+        
+        @keyframes pulsar {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
     <header>
         <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68">
         <h1>Pet id Brasil</h1>
         <slot name="info">
-            <a href="./profile.html">
-                Perfil do usuário
-            </a>
+            <a href="./profile.html">Perfil do usuário</a>
         </slot>
         <nav>
             <a href="./listagem.html">Listagem de pets</a>
