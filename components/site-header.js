@@ -1,3 +1,12 @@
+/*Esse código define um Web Component para um cabeçalho 
+(<site-header>) que inclui um logo animado, um título e 
+um menu de navegação. O cabeçalho também suporta um slot 
+nomeado info para permitir a inclusão de conteúdo adicional, 
+como um link de perfil do usuário, quando o componente é usado. 
+O uso de Shadow DOM garante que o estilo e o conteúdo do cabeçalho 
+sejam encapsulados e não afetem o restante da página*/
+
+//Criação do Template
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
@@ -63,6 +72,8 @@ template.innerHTML = `
     </header>
 `;
 
+
+//Definição da Classe do Web Component
 class SiteHeader extends HTMLElement {
     constructor() {
         super();
@@ -71,5 +82,7 @@ class SiteHeader extends HTMLElement {
         shadowRoot.append(clone);
     }
 }
+
+//Registro do Componente Customizado
 
 customElements.define('site-header', SiteHeader);

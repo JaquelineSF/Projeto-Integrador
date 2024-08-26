@@ -1,3 +1,11 @@
+/*Esse código define um componente Web personalizado para um rodapé 
+(<site-footer>) que inclui um menu de navegação, uma imagem de logo 
+e informações de contato. O uso de Shadow DOM garante que os estilos 
+e o conteúdo do rodapé sejam encapsulados, evitando conflitos com o 
+restante do documento. Isso facilita a reutilização do rodapé em diferentes 
+partes do site ou em diferentes projetos.*/
+
+//Criação do Template
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
@@ -55,6 +63,7 @@ template.innerHTML = `
     </footer>
 `;
 
+//Definição da Classe do Web Component
 class SiteFooter extends HTMLElement {
     constructor() {
         super();
@@ -64,4 +73,5 @@ class SiteFooter extends HTMLElement {
     }
 }
 
+//Registro do Componente Customizado
 customElements.define('site-footer', SiteFooter);
