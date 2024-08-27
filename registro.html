@@ -28,13 +28,18 @@
             <label for="email">E-mail:</label>
             <input type="text" id="email" name="email">
             <p>Você usará seu endereço de e-mail para logar</p><br>
+
+            <!-- Campo de Senha com type ajustado -->
             <label for="password">Senha:</label>
-            <input type="text" id="password" name="password">
+            <input type="password" id="password" name="password">
+            <button type="button" id="toggle-password">Mostrar senha</button> <!-- Posicionado logo após a senha -->
+
             <label for="cpassword">Confirme senha:</label>
-            <input type="text" id="cpassword" name="cpassword"><br><br>
+            <input type="password" id="cpassword" name="cpassword"><br><br>
+
             <input type="submit" value="Enviar">
-            <button type="button" id="toggle-password">Mostrar senha</button>
         </form>
+
         <p>Já tem uma conta? Conecte-se</p>
         <site-footer></site-footer>
         <script src="./scripts/registro.js" type="module"></script>
