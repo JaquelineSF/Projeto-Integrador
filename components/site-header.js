@@ -17,30 +17,65 @@ template.innerHTML = `
             padding: 1rem 0;
             text-align: center;
             margin-bottom: 20px;
+            position: relative;
         }
-        
+
         header img {
-            margin-bottom: 10px;
-            animation: pulsar 2s infinite;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            height: 35px;
         }
-        
+
         header h1 {
             margin-bottom: 20px;
         }
-        
+
+        header nav {
+            display: none;
+            flex-direction: column;
+            background-color: #7073a9;
+            text-align: center;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
         header nav a {
             color: white;
-            margin: 0 10px;
+            padding: 10px 0;
             text-decoration: none;
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 5px;
+            border-top: 1px solid white;
         }
-        
+
         header nav a:hover {
-            background-color: #7073a9;
+            background-color: #50527a;
         }
-        
+
+        .hamburger {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 20;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        .show {
+            display: flex;
+        }
+
         @keyframes pulsar {
             0% {
                 transform: scale(1);
@@ -55,13 +90,27 @@ template.innerHTML = `
                 opacity: 1;
             }
         }
+
+        .hamburger.open div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.open div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
     </style>
     <header>
-        <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68">
+        <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil">
         <h1>Pet id Brasil</h1>
-        <slot name="info">
-            <a href="./profile.html">Perfil do usuário</a>
-        </slot>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
             <a href="./listagem.html">Listagem de pets</a>
             <a href="./adocao.html">Adoção de pets</a>
@@ -72,17 +121,22 @@ template.innerHTML = `
     </header>
 `;
 
-
-//Definição da Classe do Web Component
 class SiteHeader extends HTMLElement {
     constructor() {
         super();
-        const shadowRoot = this.attachShadow({mode: 'closed'});
+        const shadowRoot = this.attachShadow({ mode: 'closed' });
         let clone = template.content.cloneNode(true);
         shadowRoot.append(clone);
+
+        const hamburger = shadowRoot.querySelector('.hamburger');
+        const nav = shadowRoot.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            nav.classList.toggle('show');
+        });
     }
 }
 
-//Registro do Componente Customizado
-
 customElements.define('site-header', SiteHeader);
+

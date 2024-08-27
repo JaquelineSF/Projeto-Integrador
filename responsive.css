@@ -37,3 +37,23 @@ img {
         display: block;
     }
 }
+/* Garantir que o logo tenha um tamanho máximo */
+header img {
+    max-width: 150px; /* Limitar a largura máxima */
+    height: auto; /* Manter a proporção */
+}
+
+/* Regras semelhantes para o logo no footer */
+footer img {
+    max-width: 150px;
+    height: auto;
+}
+@media (max-width: 768px) {
+    header img {
+        max-width: 120px; /* Reduzir o tamanho do logo em telas menores */
+    }
+
+    footer img {
+        max-width: 120px; /* Reduzir o tamanho do logo no footer também */
+    }
+}

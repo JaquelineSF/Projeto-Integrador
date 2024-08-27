@@ -17,7 +17,14 @@ template.innerHTML = `
             padding: 1rem 0;
             margin-top: 2rem;
         }
-        
+
+        footer img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            height: 35px;
+        }
+
         footer nav a {
             color: white;
             margin: 0 10px;
@@ -26,20 +33,20 @@ template.innerHTML = `
             padding: 5px 10px;
             border-radius: 5px;
         }
-        
+
         footer nav a:hover {
             background-color: #7073a9;
         }
-        
+
         footer section {
             margin-top: 20px;
         }
-        
+
         footer ul {
             list-style-type: none;
             padding: 0;
         }
-        
+
         footer ul li {
             margin-bottom: 5px;
         }
@@ -52,7 +59,7 @@ template.innerHTML = `
             <a href="./denuncia.html">Canal de denúncias</a>
             <a href="./cadastro_pet.html">Cadastro do Pet</a>
         </nav>
-        <p><img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68"></p>
+        <p><img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil"></p>
         <section>
             <p>Contatos: </p>
             <ul>
@@ -63,15 +70,14 @@ template.innerHTML = `
     </footer>
 `;
 
-//Definição da Classe do Web Component
 class SiteFooter extends HTMLElement {
     constructor() {
         super();
-        const shadowRoot = this.attachShadow({mode: 'closed'});
+        const shadowRoot = this.attachShadow({ mode: 'closed' });
         let clone = template.content.cloneNode(true);
         shadowRoot.append(clone);
     }
 }
 
-//Registro do Componente Customizado
 customElements.define('site-footer', SiteFooter);
+
