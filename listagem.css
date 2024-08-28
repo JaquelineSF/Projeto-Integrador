@@ -18,16 +18,7 @@ header {
     background-color: #7073a9;
     color: white;
     padding: 1rem 0;
-    position: relative;
-}
-
-.header-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 header img {
@@ -40,50 +31,18 @@ header h1 {
     vertical-align: middle;
 }
 
-/* Menu Hamburguer */
-.menu-hamburguer {
-    display: none; /* Inicialmente escondido */
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+header nav {
+    margin-top: 10px;
 }
 
-.menu-hamburguer .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px auto;
-    transition: 0.3s;
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
-/* Navegação principal e de autenticação */
-.nav-main {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.nav-auth {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-/* Mostrar o menu hamburguer em telas pequenas */
-@media (max-width: 768px) {
-    .nav-main {
-        display: none; /* Esconde navegação principal em telas pequenas */
-    }
-
-    .nav-auth {
-        display: none; /* Esconde navegação de autenticação em telas pequenas */
-    }
-
-    .menu-hamburguer {
-        display: block;
-    }
+header nav a:hover {
+    text-decoration: underline;
 }
 
 /* Main */
