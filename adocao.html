@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pet id Brasil</title>
-        <link rel="stylesheet" href="adocao.css"> 
-        <script src="./components/site-header.js" type="module"></script>
-        <script src="./components/site-footer.js" type="module"></script>
-        <link rel="stylesheet" href="responsive.css"> <!-- Novo arquivo CSS -->
-    </head>
-    <body>
-        <site-header></site-header>
-        <main>
-            <section>
-                <article>
-                    <h2>PLANEJANDO ADOTAR UM ANIMAL DE ESTIMAÇÃO?</h2>  
-                    <img src="/assets/site foto principal.jpg" alt="cachorros" height="210" width="584">
-                </article>
-            </section>
-            <section>
-                <h2>Como adotar um animal de estimação. </h2>
-                <h2>Animais de estimação disponíveis para adoção nas proximidades.</h2>
-                <ul>
-                    <li>
-                        <img src="/assets/paçoca.jpg" alt="cachorro Pacoca" height="79" width="68">
-                        <p>Paçoca</p>
-                    </li>
-                    <li>
-                        <img src="/assets/ralf.jpg" alt="gato Ralf" height="79" width="68">
-                        <p>Ralf</p>
-                    </li>
-                    <li>
-                        <img src="/assets/pipoca.jpg" alt="cachorro Pipoca" height="79" width="68">
-                        <p>Pipoca</p>
-                    </li>
-                    <li>
-                        <img src="/assets/lilica.jpg" alt="cachorro lilica" height="79" width="68">
-                        <p>Lilica</p>
-                    </li>
-                    <li>
-                        <img src="/assets/rex.jpg" alt="cachorro Rex" height="79" width="68">
-                        <p>Rex</p>
-                    </li>
-                    <li>
-                        <img src="/assets/bolinha.jpg" alt="gato Bolinha" height="79" width="68">
-                        <p>Bolinha</p>
-                    </li>
-                </ul>
-            </section>
-        </main>
-        <site-footer></site-footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet id Brasil</title>
+    <link rel="stylesheet" href="adocao.css">
+    <script src="./components/site-header.js" type="module"></script>
+    <script src="./components/site-footer.js" type="module"></script>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <site-header></site-header>
+    <main>
+        <section>
+            <article>
+                <h2>PLANEJANDO ADOTAR UM ANIMAL DE ESTIMAÇÃO?</h2>
+                <img src="/assets/site foto principal.jpg" alt="cachorros" class="main-image">
+            </article>
+        </section>
+        <section>
+            <h2>Animais de estimação disponíveis para adoção nas proximidades</h2>
+            <div class="pet-grid">
+                <div class="pet-card">
+                    <img src="/assets/paçoca.jpg" alt="cachorro Paçoca">
+                    <p>Paçoca - 2 anos, brincalhão e carinhoso</p>
+                </div>
+                <div class="pet-card">
+                    <img src="/assets/ralf.jpg" alt="gato Ralf">
+                    <p>Ralf - 1 ano, esperto e independente</p>
+                </div>
+                <div class="pet-card">
+                    <img src="/assets/pipoca.jpg" alt="cachorro Pipoca">
+                    <p>Pipoca - 3 anos, amoroso e dócil</p>
+                </div>
+                <div class="pet-card">
+                    <img src="/assets/lilica.jpg" alt="cachorro Lilica">
+                    <p>Lilica - 4 anos, enérgica e fiel</p>
+                </div>
+                <div class="pet-card">
+                    <img src="/assets/rex.jpg" alt="cachorro Rex">
+                    <p>Rex - 2 anos, corajoso e protetor</p>
+                </div>
+                <div class="pet-card">
+                    <img src="/assets/meiasbrancas.jpg" alt="gato Meias Brancas">
+                    <p>Lilica - 4 anos, enérgica e fiel</p>
+                </div>
+                <div class="pet-card">
+                    <img src="/assets/auau.webp" alt="cachorro Beto">
+                    <p>Lilica - 4 anos, enérgica e fiel</p>
+                </div>
+                <div class="pet-card">
+                    <img src="/assets/bolinha.jpg" alt="gato Bolinha">
+                    <p>Bolinha - 1 ano, brincalhão e curioso</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <site-footer></site-footer>
+</body>
 </html>
-

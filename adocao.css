@@ -32,15 +32,12 @@ main section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Articles */
-main section article {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Images */
-main section article img {
+/* Main Image */
+.main-image {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 /* Headings */
@@ -50,27 +47,39 @@ main section h2 {
     text-align: center;
 }
 
-/* List */
-main section ul {
-    list-style: none;
-    display: flex;
+/* Pet Grid */
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
-/* List Items */
-main section ul li {
-    text-align: center;
-}
-
-main section ul li img {
+/* Pet Card */
+.pet-card {
+    background-color: #fff;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
 }
 
-main section ul li p {
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pet-card p {
     margin-top: 5px;
     color: #7073a9;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -98,3 +107,4 @@ footer {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
