@@ -1,101 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Listagem de Pets</title>
-        <script src="./components/site-header.js" type="module"></script>
-        <script src="./components/site-footer.js" type="module"></script>
-        <link rel="stylesheet" href="listagem.css">
-        <link rel="stylesheet" href="responsive.css"> <!-- Novo arquivo CSS -->
-    </head>
-    <body>
-        <header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Pets</title>
+    <script src="./scripts/listagem.js" type="module"></script>
+    <script src="./components/site-header.js" type="module"></script>
+    <script src="./components/site-footer.js" type="module"></script>
+    <link rel="stylesheet" href="listagem.css">
+    <link rel="stylesheet" href="responsive.css"> <!-- Novo arquivo CSS -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="menu-hamburguer" id="menu-hamburguer">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68">
             <h1>Pet id Brasil</h1>
-            <nav slot="info">
+            <nav class="nav-main">
+                <a href="./listagem.html">Listagem de pets</a>
+                <a href="./adocao.html">Adoção de pets</a>
+                <a href="./eventos.html">Eventos Próximos</a>
+                <a href="./denuncia.html">Canal de denúncias</a>
+                <a href="./cadastro_pet.html">Cadastro do Pet</a>
+            </nav>
+            <nav class="nav-auth">
                 <a href="./cadastro_pet.html">Login</a>
                 <a href="./registro.html">Registro</a>
                 <a href="./index.html">Voltar</a>    
             </nav>
-            <nav>
-                <a href="./listagem.html">Listagem de pets</a>
-                <a href="./adocao.html">Adoção de pets</a>
-                <a href="./eventos.html">Eventos Próximos</a>
-                <a href="./denuncia.html">Canal de denúncias</a>
-                <a href="./cadastro_pet.html">Cadastro do Pet</a>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <h2>Encontre um pet em nossa lista</h2>
-                <input type="text" id="search" placeholder="Buscar pets..." />
-                <form id="filtroAnimais">
-                    <label>
-                        <input type="checkbox" name="especie" value="gato"> Gato
-                    </label>
-                    <label>
-                        <input type="checkbox" name="especie" value="cachorro"> Cachorro
-                    </label>
-                    <label>
-                        <input type="checkbox" name="especie" value="ave"> Ave
-                    </label>
-                    <label>
-                        <input type="checkbox" name="especie" value="outros"> Outros
-                    </label>
-                </form>
-            </section>
-            <section>
-                <h3>Resultados:</h3>
-                <ul>
-                    <li>
-                        <img src="./assets/maracuja.webp" alt="gato laranja">
-                        <p>Espécie: Gato</p>
-                        <p>Nome: Maracujá</p>
-                        <p>Cor: Laranja</p>
-                        <p>Sexo: Macho</p>                    
-                    </li>
-                    <li>
-                        <img src="./assets/pequena.jpg" alt="cachorro salsicha marrom">
-                        <p>Espécie: Cachorro</p>
-                        <p>Nome: Pequena</p>
-                        <p>Cor: Marrom</p>
-                        <p>Sexo: Femea</p>                    
-                    </li>
-                    <li>
-                        <img src="./assets/meiasbrancas.jpg" alt="gato preto com pata laranja">
-                        <p>Espécie: Gato</p>
-                        <p>Nome: Meias Brancas</p>
-                        <p>Cor: Preto</p>
-                        <p>Sexo: Macho</p>                    
-                    </li>
-                    <li>
-                        <img src="./assets/auau.webp" alt="cachorro preto e marron">
-                        <p>Espécie: Cachorro</p>
-                        <p>Nome: Rock</p>
-                        <p>Cor: Preto e Marron</p>
-                        <p>Sexo: Macho</p>                    
-                    </li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <nav>
-                <a href="./listagem.html">Listagem de pets</a>
-                <a href="./adocao.html">Adoção de pets</a>
-                <a href="./eventos.html">Eventos Próximos</a>
-                <a href="./denuncia.html">Canal de denúncias</a>
-                <a href="./cadastro_pet.html">Cadastro do Pet</a>
-            </nav>
-            <p><img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68"></p>
-            <section>
-                <p>Contatos: </p>
-                <ul>
-                    <li>Telefone: (99) 99999-9999</li>
-                    <li>E-mail: petid@brasil.com</li>
-                </ul>
-            </section>
-        </footer>
-        <script src="./scripts/listagem.js" type="module"></script>
-    </body>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Encontre um pet em nossa lista</h2>
+            <input type="text" id="search" placeholder="Buscar pets..." />
+            <form id="filtroAnimais">
+                <label>
+                    <input type="checkbox" name="especie" value="gato"> Gato
+                </label>
+                <label>
+                    <input type="checkbox" name="especie" value="cachorro"> Cachorro
+                </label>
+                <label>
+                    <input type="checkbox" name="especie" value="ave"> Ave
+                </label>
+                <label>
+                    <input type="checkbox" name="especie" value="outros"> Outros
+                </label>
+            </form>
+        </section>
+        <section>
+            <h3>Resultados:</h3>
+            <ul>
+                <li>
+                    <img src="./assets/maracuja.webp" alt="gato laranja">
+                    <p>Espécie: Gato</p>
+                    <p>Nome: Maracujá</p>
+                    <p>Cor: Laranja</p>
+                    <p>Sexo: Macho</p>                    
+                </li>
+                <li>
+                    <img src="./assets/pequena.jpg" alt="cachorro salsicha marrom">
+                    <p>Espécie: Cachorro</p>
+                    <p>Nome: Pequena</p>
+                    <p>Cor: Marrom</p>
+                    <p>Sexo: Femea</p>                    
+                </li>
+                <li>
+                    <img src="./assets/meiasbrancas.jpg" alt="gato preto com pata laranja">
+                    <p>Espécie: Gato</p>
+                    <p>Nome: Meias Brancas</p>
+                    <p>Cor: Preto</p>
+                    <p>Sexo: Macho</p>                    
+                </li>
+                <li>
+                    <img src="./assets/auau.webp" alt="cachorro preto e marron">
+                    <p>Espécie: Cachorro</p>
+                    <p>Nome: Rock</p>
+                    <p>Cor: Preto e Marron</p>
+                    <p>Sexo: Macho</p>                    
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="./listagem.html">Listagem de pets</a>
+            <a href="./adocao.html">Adoção de pets</a>
+            <a href="./eventos.html">Eventos Próximos</a>
+            <a href="./denuncia.html">Canal de denúncias</a>
+            <a href="./cadastro_pet.html">Cadastro do Pet</a>
+        </nav>
+        <p><img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil" height="35" width="68"></p>
+        <section>
+            <p>Contatos: </p>
+            <ul>
+                <li>Telefone: (99) 99999-9999</li>
+                <li>E-mail: petid@brasil.com</li>
+            </ul>
+        </section>
+    </footer>
+</body>
 </html>

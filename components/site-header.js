@@ -25,6 +25,7 @@ template.innerHTML = `
             height: auto;
             width: auto;
             height: 35px;
+            animation: pulsar 2s infinite; /* Adiciona a animação de volta */
         }
 
         header h1 {
@@ -139,4 +140,3 @@ class SiteHeader extends HTMLElement {
 }
 
 customElements.define('site-header', SiteHeader);
-
