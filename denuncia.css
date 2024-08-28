@@ -21,21 +21,27 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center; /* Centraliza o conteúdo no main */
 }
 
 /* Headings */
-main section h2 {
-    color: #7073a9;
-    margin-bottom: 10px;
-    text-align: center;
+main h1 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* Image */
+/* Image and Content */
+.imagem-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .imagem-principal {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
+    max-width: 40%; /* Reduzi para 40% da largura máxima */
     height: auto;
+    border-radius: 8px;
 }
 
 /* Main Section */
@@ -45,10 +51,15 @@ main section h2 {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
+    text-align: center; /* Centraliza o conteúdo dentro da seção principal */
 }
 
+/* Caixa de Texto */
 .caixa-texto {
-    margin: 20px 0;
+    width: 100%; /* Usei largura total para garantir que o conteúdo ocupe o espaço corretamente */
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza a caixa de texto */
+    text-align: center;
 }
 
 .caixa-texto h2 {
@@ -68,6 +79,8 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    max-width: 600px; /* Limita a largura máxima do select */
+    margin: 0 auto; /* Centraliza o select */
 }
 
 /* Links */
@@ -78,7 +91,7 @@ a {
 }
 
 a:hover {
-    color: #7073a9;
+    color: #50557b;
 }
 
 /* Footer */
