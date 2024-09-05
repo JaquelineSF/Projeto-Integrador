@@ -105,7 +105,7 @@ template.innerHTML = `
         }
     </style>
     <header>
-        <img src="/assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil">
+        <img src="assets/LOGO_COLOR_RGB.png" alt="logo pet id brasil">
         <h1>Pet id Brasil</h1>
         <div class="hamburger">
             <div></div>
