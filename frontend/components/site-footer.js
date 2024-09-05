@@ -61,7 +61,7 @@ template.innerHTML = `
             margin-top: 1rem; /* Espaçamento acima do logo */
         }
     </style>
-    <footer>
+     <footer>
         <nav>
             <a href="./listagem.html">Listagem de pets</a>
             <a href="./adocao.html">Adoção de pets</a>
