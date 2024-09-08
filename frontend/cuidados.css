@@ -16,6 +16,25 @@ body {
     flex-direction: column;
     align-items: center;
 }
+/* Header */
+site-header {
+    width: 100%;
+    background-color: #7073a9;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 ;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
 /* Main */
 main {
     width: 100%;
@@ -32,7 +51,7 @@ section {
 
 section h2 {
     color: #7073a9;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 section p {
@@ -44,30 +63,33 @@ section img {
     border-radius: 8px;
 }
 
-/* Rodapé */
+/* Footer */
 footer {
-    width: 100%;
     background-color: #7073a9;
     color: white;
     text-align: center;
-    padding: 20px 0;
-}
-
-footer nav ul {
-    list-style: none;
     padding: 0;
+    margin-top:0;
 }
 
-footer nav ul li {
-    display: inline;
-    margin-right: 15px;
+footer nav {
+    margin-bottom: 1rem;
 }
 
-footer nav ul li a {
+footer nav a {
     color: white;
+    margin: 0 ;
     text-decoration: none;
 }
 
-footer p {
-    margin-top: 10px;
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+footer section {
+    margin-top: 1rem;
+}
+
+footer img {
+    margin-top: 1rem;
 }
