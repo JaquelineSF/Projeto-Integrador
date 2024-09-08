@@ -63,6 +63,7 @@ template.innerHTML = `
     </style>
      <footer>
         <nav>
+            <a href="./cuidados.html">Cuidados com o PET</a>
             <a href="./listagem.html">Listagem de pets</a>
             <a href="./adocao.html">Adoção de pets</a>
             <a href="./eventos.html">Eventos Próximos</a>
@@ -76,6 +77,7 @@ template.innerHTML = `
                 <li>Telefone: (99) 99999-9999</li>
                 <li>E-mail: petid@brasil.com</li>
             </ul>
+            <p>&copy; 2024 Cuidados com Pets. Todos os direitos reservados.</p>
         </section>
     </footer>
 `;
