@@ -81,16 +81,17 @@ header nav a:hover {
     background-color: #ddd;
 }
 
-/* Footer */
-site-footer {
-    width: 100%;
-    background-color: #7073a9;
+/* Links */
+a {
     color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
 }
-/* Footer */
+
+a:hover {
+    color: #50557b;
+}
+
 footer {
     width: 100%;
     background-color: #7073a9;
@@ -116,3 +117,4 @@ footer {
     font-size: 1.2rem;
     font-weight: bold;
 }
+

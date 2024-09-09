@@ -116,7 +116,7 @@ select {
 
 /* Links */
 a {
-    color: #7073a9;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -125,12 +125,12 @@ a:hover {
     color: #50557b;
 }
 
-/* Footer */
 footer {
+    width: 100%;
     background-color: #7073a9;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
     margin-top: 2rem;
 }
 
@@ -150,3 +150,4 @@ footer {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
