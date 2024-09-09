@@ -114,6 +114,7 @@ headerTemplate.innerHTML = `
             <div></div>
         </div>
         <nav>
+            <a href="./index.html">Pagina Principal</a>
             <a href="./cuidados.html">Cuidados com o PET</a>
             <a href="./listagem.html">Listagem de pets</a>
             <a href="./adocao.html">Adoção de pets</a>

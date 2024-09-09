@@ -5,7 +5,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Header */
+header {
+    background-color: #7073a9;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
 
+header img {
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
 /* Header com bordas infinitas */
 #cuidados header {
     background-image: url('header-background.jpg'); /* Substitua pela imagem correta */
@@ -55,4 +85,29 @@
 
 #cuidados footer a:hover {
     text-decoration: underline;
+}
+/* Footer */
+footer {
+    background-color: #7073a9;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
 }

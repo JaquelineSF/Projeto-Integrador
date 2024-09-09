@@ -10,38 +10,41 @@
         <link rel="stylesheet" href="responsive.css"> <!-- Novo arquivo CSS -->
     </head>
     <body>
-        <site-header>
+        <site-header></site-header>
+        <header>
             <nav slot="info">
                 <a href="./index.html">Voltar</a>
             </nav>
-        </site-header>
-        <h2>Registro</h2>
+        </header>
+        <main>
+            <h2>Registro</h2>
 
-        <form action="">
-            <label for="fname">Nome:</label>
-            <input type="text" id="fname" name="fname">
-            <label for="lname">Sobrenome:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <label for="state">Estado:</label>
-            <input type="text" id="state" name="state">
-            <label for="cep">CEP:</label>
-            <input type="number" id="cep" name="cep"><br><br>
-            <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email">
-            <p>Você usará seu endereço de e-mail para logar</p><br>
+            <form action="">
+                <label for="fname">Nome:</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Sobrenome:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="state">Estado:</label>
+                <input type="text" id="state" name="state">
+                <label for="cep">CEP:</label>
+                <input type="number" id="cep" name="cep"><br><br>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email">
+                <p>Você usará seu endereço de e-mail para logar</p><br>
 
-            <!-- Campo de Senha com type ajustado -->
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password">
-            <button type="button" id="toggle-password">Mostrar senha</button> <!-- Posicionado logo após a senha -->
+                <!-- Campo de Senha com type ajustado -->
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password">
+                <button type="button" id="toggle-password">Mostrar senha</button> <!-- Posicionado logo após a senha -->
 
-            <label for="cpassword">Confirme senha:</label>
-            <input type="password" id="cpassword" name="cpassword"><br><br>
+                <label for="cpassword">Confirme senha:</label>
+                <input type="password" id="cpassword" name="cpassword"><br><br>
 
-            <input type="submit" value="Enviar">
-        </form>
+                <input type="submit" value="Enviar">
+            </form>
 
-        <p>Já tem uma conta? Conecte-se</p>
+            <p>Já tem uma conta? Conecte-se</p>
+        </main>
         <footer>
             <nav>
                 <a href="index.html">Home</a> <!-- Link para a Home -->
