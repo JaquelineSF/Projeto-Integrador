@@ -7,8 +7,9 @@ O uso de Shadow DOM garante que o estilo e o conteúdo do cabeçalho
 sejam encapsulados e não afetem o restante da página*/
 
 //Criação do Template
-const template = document.createElement('template');
-template.innerHTML = `
+// Criação do template para o componente de header
+const headerTemplate = document.createElement('template');
+headerTemplate.innerHTML = `
     <style>
         header {
             width: 100%;
@@ -127,7 +128,7 @@ class SiteHeader extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: 'closed' });
-        let clone = template.content.cloneNode(true);
+        let clone = headerTemplate.content.cloneNode(true);
         shadowRoot.append(clone);
 
         const hamburger = shadowRoot.querySelector('.hamburger');

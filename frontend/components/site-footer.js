@@ -6,8 +6,9 @@ restante do documento. Isso facilita a reutilização do rodapé em diferentes
 partes do site ou em diferentes projetos.*/
 
 //Criação do Template
-const template = document.createElement('template');
-template.innerHTML = `
+// Criação do template para o componente de footer
+const footerTemplate = document.createElement('template');
+footerTemplate.innerHTML = `
     <style>
         footer {
             width: 100%;
@@ -61,7 +62,7 @@ template.innerHTML = `
             margin-top: 1rem; /* Espaçamento acima do logo */
         }
     </style>
-     <footer>
+    <footer>
         <nav>
             <a href="./cuidados.html">Cuidados com o PET</a>
             <a href="./listagem.html">Listagem de pets</a>
@@ -87,7 +88,7 @@ class SiteFooter extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: 'closed' });
-        let clone = template.content.cloneNode(true);
+        let clone = footerTemplate.content.cloneNode(true);
         shadowRoot.append(clone);
     }
 }
