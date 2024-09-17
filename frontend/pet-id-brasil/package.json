@@ -1,0 +1,16 @@
+{
+  "name": "pet-id-brasil",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix client",
+    "server": "nodemon server/server.js",
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
